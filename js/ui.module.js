@@ -111,7 +111,9 @@ export class getGames {
               <button class='btn clsBtn text-white position-absolute end-0 '  ><i class="fa-solid fa-x"></i></button>
 
       <div class='col-md-4'>
-      <img src="${game.thumbnail}" class=' w-100 cat-image' alt=""></div>
+      <img src="${game.thumbnail}" class=' w-100 cat-image' alt="">
+      </div>
+      
       <div class='col-md-8'>
       <div class='tags ps-4'>
         <p class='py-1'>category:<span class='bg-info p-1 rounded-4'>${game.genre}</span></p>
@@ -120,8 +122,11 @@ export class getGames {
         </div>
         
         <p class='px-3 small'>${resultz.modalDesc}</p>
+       <a class="btn showBtn   btn-outline-warning" target="_blank" href="${resultz.gamelink}">Show Game</a>
+        
       </div>
     </div>
+    
   `;
         // Append modal to body and show
         
@@ -140,3 +145,4 @@ export class getGames {
      document.querySelector(".details").classList.add("d-none");
    });
  });
+

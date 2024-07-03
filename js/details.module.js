@@ -20,8 +20,9 @@ export class DisplayGame {
     let gameData = await response.json();
     let modalDesc=gameData.description;
     let gamestate = gameData.status;
-    console.log(gamestate);
-   return { modalDesc, gamestate };
+     let gamelink = gameData.game_url;
+    console.log(gamelink);
+   return { modalDesc, gamestate,gamelink };
   }
 }
 
